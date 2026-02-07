@@ -10,7 +10,7 @@ I’ve implemented full CRUD functionality, external data validation, automatic 
 
 I chose this specific stack to ensure maximum performance and "set-it-and-forget-it" automatic documentation:
 
-- **Python 3.12.3**
+- **FROM python:3.12-slim**
 - **FastAPI:** For building a lightning-fast, asynchronous API.
 - **SQLAlchemy (SQLite):** For reliable data storage without the headache of setting up a heavy database server.
 - **Pydantic:** For strict data validation (no junk data allowed!).
