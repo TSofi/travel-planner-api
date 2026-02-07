@@ -13,12 +13,12 @@ I chose this specific stack to ensure maximum performance and "set-it-and-forget
 - **Python 3.12.3**
 - **FastAPI:** For building a lightning-fast, asynchronous API.
 - **SQLAlchemy (SQLite):** For reliable data storage without the headache of setting up a heavy database server.
-- \*Pydantic:\*\* For strict data validation (no junk data allowed!).
+- **Pydantic:** For strict data validation (no junk data allowed!).
 - **Docker:** To containerize the application so it works perfectly on any machine, no "it works on my computer" excuses.
 
 ---
 
-## How to Run (Step-by-Step)
+## How to Run(Step-by-Step)
 
 If you're seeing this code for the first time and want to take it for a spin, you have two options: Docker (highly recommended) or running it locally via Python.
 
@@ -74,15 +74,14 @@ If you prefer to run the code directly:
 
 ## How to Test(Interactive Docs)
 
-The coolest feature of this project is the automatic interactive documentation. You don’t even need to open Postman (though it works there too)—you can test everything right in your browser.
+The coolest feature of this project is the automatic interactive documentation. You don’t even need to open Postman (though it works there too)-you can test everything right in your browser.
 
 1.  Open your browser and go to: **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**
 2.  You’ll see the **Swagger UI**-a clean list of all available commands.
 
-### Smoke Test Scenario
+### API testing guide(manual verification)
 
-Let’s walk through a typical user journey to see the magic in action:
-
+Since this is a backend-only service, you can test the logic using the built-in interactive documentation(Swagger). This scenario demonstrates how the API interacts with the Art Institute of Chicago to enrich data.
 **Step 1: Create a project with art spots**
 
 - Find the `POST /projects/` block.
@@ -92,7 +91,7 @@ Let’s walk through a typical user journey to see the magic in action:
   {
     "name": "Chicago Art Trip",
     "description": "Visiting the best impressionist works",
-    "start_date": "2023-10-25",
+    "start_date": "2026-05-20",
     "initial_places": [28560]
   }
   ```
